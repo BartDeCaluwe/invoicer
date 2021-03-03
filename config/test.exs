@@ -14,10 +14,10 @@ defmodule TestEnvironment do
   end
 end
 
-config :elixir_boilerplate, ElixirBoilerplate.Repo,
+config :invoicer, Invoicer.Repo,
   pool: Ecto.Adapters.SQL.Sandbox,
   url: TestEnvironment.get_database_url()
 
-config :elixir_boilerplate, ElixirBoilerplateWeb.Endpoint, server: false
+config :invoicer, InvoicerWeb.Endpoint, server: false
 
 config :logger, level: :warn

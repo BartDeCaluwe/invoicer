@@ -1,4 +1,4 @@
-defmodule ElixirBoilerplate.DataCase do
+defmodule Invoicer.DataCase do
   @moduledoc """
   This module defines the setup for tests requiring
   access to the application's data layer.
@@ -16,16 +16,16 @@ defmodule ElixirBoilerplate.DataCase do
 
   alias Ecto.Adapters.SQL.Sandbox
   alias Ecto.Changeset
-  alias ElixirBoilerplate.Repo
+  alias Invoicer.Repo
 
   using do
     quote do
-      alias ElixirBoilerplate.Repo
+      alias Invoicer.Repo
 
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
-      import ElixirBoilerplate.DataCase
+      import Invoicer.DataCase
     end
   end
 

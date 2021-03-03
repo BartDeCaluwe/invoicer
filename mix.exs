@@ -1,9 +1,9 @@
-defmodule ElixirBoilerplate.Mixfile do
+defmodule Invoicer.Mixfile do
   use Mix.Project
 
   def project do
     [
-      app: :elixir_boilerplate,
+      app: :invoicer,
       version: "0.0.1",
       elixir: "~> 1.11",
       erlang: "~> 23.1",
@@ -22,7 +22,7 @@ defmodule ElixirBoilerplate.Mixfile do
 
   def application do
     [
-      mod: {ElixirBoilerplate.Application, []},
+      mod: {Invoicer.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end
@@ -99,9 +99,9 @@ defmodule ElixirBoilerplate.Mixfile do
 
   defp releases do
     [
-      elixir_boilerplate: [
-        version: {:from_app, :elixir_boilerplate},
-        applications: [elixir_boilerplate: :permanent],
+      invoicer: [
+        version: {:from_app, :invoicer},
+        applications: [invoicer: :permanent],
         include_executables_for: [:unix],
         steps: [:assemble, :tar]
       ]
